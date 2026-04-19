@@ -6,13 +6,13 @@ const userModel = new mongoose.Schema({
         required:true
     },
     username:{
-        type:String,
-        required:true,
-        unique:true
+      type:String,
+      required:true,
+      unique:true
     },
     password:{
-        type: String,
-        required: true
+        type:String,
+        required:true
     },
     profilePhoto:{
         type:String,
@@ -20,9 +20,8 @@ const userModel = new mongoose.Schema({
     },
     gender:{
         type:String,
-        enum:["male","female"],
+        enum:["male", "female"],
         required:true
     }
-});
-
+}, {timestamps:true});
 export const User = mongoose.model("User", userModel);
